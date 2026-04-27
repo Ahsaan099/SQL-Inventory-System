@@ -1,16 +1,45 @@
-# React + Vite
+InvenTrack Pro | SQL-Simulated Inventory Management
+A professional inventory management dashboard designed with React and Tailwind CSS. This system implements a simulated SQL engine that bridges the gap between frontend actions and database logic, providing a comprehensive visualization of stock operations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Key Features
+SQL Visualization Engine
+Every operation including adding, editing, or deleting products automatically generates the corresponding SQL query. This allows for a clear understanding of how the frontend interacts with a relational database.
 
-Currently, two official plugins are available:
+Dynamic Inventory Monitoring
+The dashboard tracks vital metrics such as total product count, low stock warnings, and the total monetary value of the current inventory.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Intelligent Stock Indicators
+The system categorizes products based on quantity levels. Items with zero quantity are flagged as Out of Stock, while those below ten units are categorized as Low Stock to trigger re-order alerts.
 
-## React Compiler
+Advanced User Interface
+A custom HTML5 Canvas cursor trail provides a smooth navigation experience. The interface uses pure CSS keyframe animations for staggered row entrances and modal transitions, ensuring a lightweight and responsive application.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech Stack
+Frontend: React via Vite
+Styling: Tailwind CSS
+Icons: Lucide-React
+Animation: Native CSS Keyframes and HTML5 Canvas
+Database Logic: JavaScript-based SQL Simulation
 
-## Expanding the ESLint configuration
+Project Structure
+src/components: Contains modular UI elements like tables, modals, and stat cards.
+src/data: Holds the core logic for SQL query generation and initial datasets.
+src/App.jsx: The central hub managing application state and business logic.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Installation and Setup
+Clone the repository to your local machine.
+
+Run npm install to set up all necessary dependencies.
+
+Use npm run dev to start the local development server.
+
+Execute npm run build for production-ready deployment.
+
+Example SQL Generation
+The engine produces standard SQL syntax for all operations:
+
+Insert: INSERT INTO products (name, category, quantity, price, sku) VALUES (...);
+
+Update: UPDATE products SET quantity = 15 WHERE id = 5;
+
+Delete: DELETE FROM products WHERE id = 2;
