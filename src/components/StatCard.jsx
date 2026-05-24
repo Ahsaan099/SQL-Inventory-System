@@ -1,7 +1,7 @@
 export default function StatCard({ icon: Icon, label, value, color, sub }) {
   return (
     <div style={{
-      background: "rgba(15,20,40,0.7)",
+      background: "black",
       border: `1px solid ${color}33`,
       borderRadius: 14, padding: "18px 22px",
       backdropFilter: "blur(12px)",
