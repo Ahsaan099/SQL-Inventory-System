@@ -36,8 +36,6 @@ export default function ProductFormModal({
           animation: "modalIn 0.25s ease",
         }}
       >
-        {/* HEADER */}
-
         <div
           style={{
             display: "flex",
@@ -90,7 +88,6 @@ export default function ProductFormModal({
           </button>
         </div>
 
-        {/* FIELDS */}
 
         <div
           style={{
@@ -99,7 +96,6 @@ export default function ProductFormModal({
             gap: 14,
           }}
         >
-          {/* NAME */}
 
           <div style={{ gridColumn: "1 / -1" }}>
             <label
@@ -148,7 +144,6 @@ export default function ProductFormModal({
             )}
           </div>
 
-          {/* CATEGORY */}
 
           <div>
             <label
@@ -196,7 +191,6 @@ export default function ProductFormModal({
             </select>
           </div>
 
-          {/* SKU */}
 
           <div>
             <label
@@ -245,7 +239,6 @@ export default function ProductFormModal({
             )}
           </div>
 
-          {/* QUANTITY */}
 
           <div>
             <label
@@ -326,7 +319,6 @@ export default function ProductFormModal({
               )}
           </div>
 
-          {/* PRICE */}
 
           <div>
             <label
@@ -378,7 +370,6 @@ export default function ProductFormModal({
           </div>
         </div>
 
-        {/* ACTIONS */}
 
         <div
           style={{
