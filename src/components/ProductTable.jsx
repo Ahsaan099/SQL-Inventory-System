@@ -1,4 +1,3 @@
-```jsx id="f7gw8f"
 import { Edit3, Trash2, Database } from "lucide-react";
 import { Package } from "lucide-react";
 import { getStatus } from "../data/products";
@@ -340,4 +339,3 @@ export default function ProductTable({
     </div>
   );
 }
-```
