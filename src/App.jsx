@@ -69,7 +69,6 @@ export default function App() {
 
   const nextId = useRef(100);
 
-  /* ───────────────── handlers ───────────────── */
 
   const openAdd = () => {
     setEditId(null);
@@ -168,7 +167,6 @@ export default function App() {
     );
   };
 
-  /* ───────────────── derived ───────────────── */
 
   const filtered = products.filter((p) => {
     const s = search.toLowerCase();
@@ -199,7 +197,6 @@ export default function App() {
     (p) => p.quantity > 0 && p.quantity < 10
   ).length;
 
-  /* ───────────────── render ───────────────── */
 
   return (
     <div
@@ -212,7 +209,6 @@ export default function App() {
     >
       <CursorGlow />
 
-      {/* HEADER */}
 
       <header
         style={{
@@ -275,7 +271,6 @@ export default function App() {
             flexWrap: "wrap",
           }}
         >
-          {/* SQL BUTTON */}
 
           <button
             onClick={() =>
@@ -303,7 +298,6 @@ export default function App() {
             View SQL Query
           </button>
 
-          {/* ADD BUTTON */}
 
           <button
             onClick={openAdd}
@@ -328,7 +322,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* MAIN */}
 
       <main
         style={{
@@ -337,7 +330,6 @@ export default function App() {
           margin: "0 auto",
         }}
       >
-        {/* STATS */}
 
         <div
           style={{
@@ -380,7 +372,6 @@ export default function App() {
           />
         </div>
 
-        {/* TABLE CARD */}
 
         <div
           style={{
@@ -390,7 +381,6 @@ export default function App() {
             overflow: "hidden",
           }}
         >
-          {/* TOOLBAR */}
 
           <div
             style={{
@@ -402,7 +392,6 @@ export default function App() {
               flexWrap: "wrap",
             }}
           >
-            {/* SEARCH */}
 
             <div
               style={{
@@ -439,7 +428,6 @@ export default function App() {
               />
             </div>
 
-            {/* FILTERS */}
 
             <div
               style={{
@@ -488,7 +476,6 @@ export default function App() {
             </span>
           </div>
 
-          {/* TABLE */}
 
           <ProductTable
             filtered={filtered}
@@ -504,7 +491,6 @@ export default function App() {
             }
           />
 
-          {/* FOOTER */}
 
           <div
             style={{
@@ -542,7 +528,6 @@ export default function App() {
         </div>
       </main>
 
-      {/* MODALS */}
 
       {showModal && (
         <ProductFormModal
